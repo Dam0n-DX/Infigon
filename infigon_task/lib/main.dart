@@ -101,7 +101,7 @@ class _MyTaskState extends State<MyTask> {
                           ),
                           onPressed: null,
                         ),
-                        Container(
+                       Container(
                           height: 380,
                           width: 240,
                           decoration: BoxDecoration(
@@ -121,11 +121,30 @@ class _MyTaskState extends State<MyTask> {
                               Column(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: <Widget>[
-                                  Text(
-                                    "3\u1d3f\u1d30",
-                                    style: TextStyle(
-                                      fontSize: 140,
-                                      color: Colors.blue,
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                      right: 20,
+                                      left: 20,
+                                      top: 0,
+                                      bottom: 0,
+                                    ),
+                                    child: Row(
+                                      children: <Widget>[
+                                        Text(
+                                          "3",
+                                          style: TextStyle(
+                                            fontSize: 195,
+                                            color: Colors.blue,
+                                          ),
+                                        ),
+                                        Text(
+                                          "\u1d3f\u1d30",
+                                          style: TextStyle(
+                                            fontSize: 90,
+                                            color: Colors.blue,
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                   ),
                                   Text(
