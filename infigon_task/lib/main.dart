@@ -57,16 +57,20 @@ class _MyTaskState extends State<MyTask> {
                       ),
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                      "Available Tests",
-                      style: TextStyle(
-                        color: Colors.blue,
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
+                  Stack(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          "Available Tests",
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                       ),
-                    ),
+                    ],
                   ),
                 ],
               ),
@@ -88,7 +92,7 @@ class _MyTaskState extends State<MyTask> {
                     ),
                   ),
                   Positioned(
-                    top: -310,
+                    top: -330,
                     right: -15,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -101,12 +105,13 @@ class _MyTaskState extends State<MyTask> {
                           ),
                           onPressed: null,
                         ),
-                       Container(
+                        Container(
+                          margin: EdgeInsets.symmetric(vertical: 20.0),
                           height: 380,
                           width: 240,
                           decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(15),
+                            // color: Colors.transparent,
+                            borderRadius: BorderRadius.circular(1),
                             boxShadow: [
                               new BoxShadow(
                                 color: Colors.black12,
@@ -115,126 +120,776 @@ class _MyTaskState extends State<MyTask> {
                               )
                             ],
                           ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: <Widget>[
-                                  Padding(
-                                    padding: const EdgeInsets.only(
-                                      right: 20,
-                                      left: 20,
-                                      top: 0,
-                                      bottom: 0,
-                                    ),
-                                    child: Row(
-                                      children: <Widget>[
-                                        Text(
-                                          "3",
-                                          style: TextStyle(
-                                            fontSize: 195,
-                                            color: Colors.blue,
-                                          ),
-                                        ),
-                                        Text(
-                                          "\u1d3f\u1d30",
-                                          style: TextStyle(
-                                            fontSize: 90,
-                                            color: Colors.blue,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                  Text(
-                                    "MODULE",
-                                    style: TextStyle(
-                                        fontSize: 40,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.blue),
-                                  ),
-                                ],
-                              ),
-                              Container(
-                                height: 100,
-                                width: 150,
-                                decoration: BoxDecoration(
-                                  color: Colors.white30,
-                                  borderRadius: BorderRadius.circular(15),
-                                  // boxShadow: [
-                                  //   new BoxShadow(
-                                  //     color: Colors.black12,
-                                  //     // offset: new Offset(20.0, 10.0),
-                                  //     blurRadius: 20.0,
-                                  //   )
-                                  // ],
+                          child: ListView(
+                            scrollDirection: Axis.horizontal,
+                            children: <Widget>[
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                  right: 10.0,
+                                  // left: 10.0,
                                 ),
-                                child: Column(
-                                  children: <Widget>[
-                                    Text(
-                                      "CBSE Std. VIII",
-                                      style: TextStyle(
-                                          fontSize: 10,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.blue),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.all(5),
-                                      child: Container(
-                                        decoration: BoxDecoration(
-                                            color: Colors.blue,
-                                            borderRadius:
-                                                BorderRadius.circular(10)),
-                                        child: Padding(
-                                          padding: const EdgeInsets.only(
-                                            top: 4,
-                                            right: 15,
-                                            left: 15,
-                                            bottom: 4,
-                                          ),
-                                          child: Text(
-                                            "EDIT",
-                                            style: TextStyle(
-                                              fontSize: 8,
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.bold,
+                                child: Container(
+                                  height: 380,
+                                  width: 240,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(15),
+                                    boxShadow: [
+                                      new BoxShadow(
+                                        color: Colors.black12,
+                                        // offset: new Offset(20.0, 10.0),
+                                        blurRadius: 20.0,
+                                      )
+                                    ],
+                                  ),
+                                  child: Column(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        children: <Widget>[
+                                          Padding(
+                                            padding: const EdgeInsets.only(
+                                              right: 20,
+                                              left: 20,
+                                              top: 0,
+                                              bottom: 0,
+                                            ),
+                                            child: Row(
+                                              children: <Widget>[
+                                                Text(
+                                                  "1",
+                                                  style: TextStyle(
+                                                    fontSize: 195,
+                                                    color: Colors.blue,
+                                                  ),
+                                                ),
+                                                Text(
+                                                  "\u02e2\u1d57",
+                                                  style: TextStyle(
+                                                    fontSize: 90,
+                                                    color: Colors.blue,
+                                                  ),
+                                                ),
+                                              ],
                                             ),
                                           ),
+                                          Text(
+                                            "MODULE",
+                                            style: TextStyle(
+                                                fontSize: 40,
+                                                fontWeight: FontWeight.bold,
+                                                color: Colors.blue),
+                                          ),
+                                        ],
+                                      ),
+                                      Container(
+                                        height: 100,
+                                        width: 150,
+                                        decoration: BoxDecoration(
+                                          color: Colors.white30,
+                                          borderRadius:
+                                              BorderRadius.circular(15),
+                                          // boxShadow: [
+                                          //   new BoxShadow(
+                                          //     color: Colors.black12,
+                                          //     // offset: new Offset(20.0, 10.0),
+                                          //     blurRadius: 20.0,
+                                          //   )
+                                          // ],
+                                        ),
+                                        child: Column(
+                                          children: <Widget>[
+                                            Text(
+                                              "CBSE Std. VIII",
+                                              style: TextStyle(
+                                                  fontSize: 10,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.blue),
+                                            ),
+                                            Padding(
+                                              padding: const EdgeInsets.all(5),
+                                              child: Container(
+                                                decoration: BoxDecoration(
+                                                    color: Colors.blue,
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            10)),
+                                                child: Padding(
+                                                  padding:
+                                                      const EdgeInsets.only(
+                                                    top: 4,
+                                                    right: 15,
+                                                    left: 15,
+                                                    bottom: 4,
+                                                  ),
+                                                  child: Text(
+                                                    "EDIT",
+                                                    style: TextStyle(
+                                                      fontSize: 8,
+                                                      color: Colors.white,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                top: 15,
+                                                right: 15,
+                                                left: 15,
+                                                bottom: 0,
+                                              ),
+                                              child: Container(
+                                                decoration: BoxDecoration(
+                                                    color: Colors.blue,
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            20)),
+                                                child: Padding(
+                                                  padding:
+                                                      const EdgeInsets.only(
+                                                    top: 10,
+                                                    right: 15,
+                                                    left: 15,
+                                                    bottom: 10,
+                                                  ),
+                                                  child: Text(
+                                                    "TAKE TEST",
+                                                    style: TextStyle(
+                                                      fontSize: 10,
+                                                      color: Colors.white,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                            )
+                                          ],
                                         ),
                                       ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(
-                                        top: 15,
-                                        right: 15,
-                                        left: 15,
-                                        bottom: 0,
-                                      ),
-                                      child: Container(
-                                        decoration: BoxDecoration(
-                                            color: Colors.blue,
-                                            borderRadius:
-                                                BorderRadius.circular(20)),
-                                        child: Padding(
-                                          padding: const EdgeInsets.only(
-                                            top: 10,
-                                            right: 15,
-                                            left: 15,
-                                            bottom: 10,
-                                          ),
-                                          child: Text(
-                                            "TAKE TEST",
-                                            style: TextStyle(
-                                              fontSize: 10,
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.bold,
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                  right: 10.0,
+                                  left: 10.0,
+                                ),
+                                child: Container(
+                                  height: 380,
+                                  width: 240,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(15),
+                                    boxShadow: [
+                                      new BoxShadow(
+                                        color: Colors.black12,
+                                        // offset: new Offset(20.0, 10.0),
+                                        blurRadius: 20.0,
+                                      )
+                                    ],
+                                  ),
+                                  child: Column(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        children: <Widget>[
+                                          Padding(
+                                            padding: const EdgeInsets.only(
+                                              right: 20,
+                                              left: 20,
+                                              top: 0,
+                                              bottom: 0,
+                                            ),
+                                            child: Row(
+                                              children: <Widget>[
+                                                Text(
+                                                  "2",
+                                                  style: TextStyle(
+                                                    fontSize: 195,
+                                                    color: Colors.blue,
+                                                  ),
+                                                ),
+                                                Text(
+                                                  "\u207f\u1d30",
+                                                  style: TextStyle(
+                                                    fontSize: 90,
+                                                    color: Colors.blue,
+                                                  ),
+                                                ),
+                                              ],
                                             ),
                                           ),
+                                          Text(
+                                            "MODULE",
+                                            style: TextStyle(
+                                                fontSize: 40,
+                                                fontWeight: FontWeight.bold,
+                                                color: Colors.blue),
+                                          ),
+                                        ],
+                                      ),
+                                      Container(
+                                        height: 100,
+                                        width: 150,
+                                        decoration: BoxDecoration(
+                                          color: Colors.white30,
+                                          borderRadius:
+                                              BorderRadius.circular(15),
+                                          // boxShadow: [
+                                          //   new BoxShadow(
+                                          //     color: Colors.black12,
+                                          //     // offset: new Offset(20.0, 10.0),
+                                          //     blurRadius: 20.0,
+                                          //   )
+                                          // ],
+                                        ),
+                                        child: Column(
+                                          children: <Widget>[
+                                            Text(
+                                              "CBSE Std. VIII",
+                                              style: TextStyle(
+                                                  fontSize: 10,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.blue),
+                                            ),
+                                            Padding(
+                                              padding: const EdgeInsets.all(5),
+                                              child: Container(
+                                                decoration: BoxDecoration(
+                                                    color: Colors.blue,
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            10)),
+                                                child: Padding(
+                                                  padding:
+                                                      const EdgeInsets.only(
+                                                    top: 4,
+                                                    right: 15,
+                                                    left: 15,
+                                                    bottom: 4,
+                                                  ),
+                                                  child: Text(
+                                                    "EDIT",
+                                                    style: TextStyle(
+                                                      fontSize: 8,
+                                                      color: Colors.white,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                top: 15,
+                                                right: 15,
+                                                left: 15,
+                                                bottom: 0,
+                                              ),
+                                              child: Container(
+                                                decoration: BoxDecoration(
+                                                    color: Colors.blue,
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            20)),
+                                                child: Padding(
+                                                  padding:
+                                                      const EdgeInsets.only(
+                                                    top: 10,
+                                                    right: 15,
+                                                    left: 15,
+                                                    bottom: 10,
+                                                  ),
+                                                  child: Text(
+                                                    "TAKE TEST",
+                                                    style: TextStyle(
+                                                      fontSize: 10,
+                                                      color: Colors.white,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                            )
+                                          ],
                                         ),
                                       ),
-                                    )
-                                  ],
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                  right: 10.0,
+                                  left: 10.0,
+                                ),
+                                child: Container(
+                                  height: 380,
+                                  width: 240,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(15),
+                                    boxShadow: [
+                                      new BoxShadow(
+                                        color: Colors.black12,
+                                        // offset: new Offset(20.0, 10.0),
+                                        blurRadius: 20.0,
+                                      )
+                                    ],
+                                  ),
+                                  child: Column(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        children: <Widget>[
+                                          Padding(
+                                            padding: const EdgeInsets.only(
+                                              right: 20,
+                                              left: 20,
+                                              top: 0,
+                                              bottom: 0,
+                                            ),
+                                            child: Row(
+                                              children: <Widget>[
+                                                Text(
+                                                  "3",
+                                                  style: TextStyle(
+                                                    fontSize: 195,
+                                                    color: Colors.blue,
+                                                  ),
+                                                ),
+                                                Text(
+                                                  "\u1d3f\u1d30",
+                                                  style: TextStyle(
+                                                    fontSize: 90,
+                                                    color: Colors.blue,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          Text(
+                                            "MODULE",
+                                            style: TextStyle(
+                                                fontSize: 40,
+                                                fontWeight: FontWeight.bold,
+                                                color: Colors.blue),
+                                          ),
+                                        ],
+                                      ),
+                                      Container(
+                                        height: 100,
+                                        width: 150,
+                                        decoration: BoxDecoration(
+                                          color: Colors.white30,
+                                          borderRadius:
+                                              BorderRadius.circular(15),
+                                          // boxShadow: [
+                                          //   new BoxShadow(
+                                          //     color: Colors.black12,
+                                          //     // offset: new Offset(20.0, 10.0),
+                                          //     blurRadius: 20.0,
+                                          //   )
+                                          // ],
+                                        ),
+                                        child: Column(
+                                          children: <Widget>[
+                                            Text(
+                                              "CBSE Std. VIII",
+                                              style: TextStyle(
+                                                  fontSize: 10,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.blue),
+                                            ),
+                                            Padding(
+                                              padding: const EdgeInsets.all(5),
+                                              child: Container(
+                                                decoration: BoxDecoration(
+                                                    color: Colors.blue,
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            10)),
+                                                child: Padding(
+                                                  padding:
+                                                      const EdgeInsets.only(
+                                                    top: 4,
+                                                    right: 15,
+                                                    left: 15,
+                                                    bottom: 4,
+                                                  ),
+                                                  child: Text(
+                                                    "EDIT",
+                                                    style: TextStyle(
+                                                      fontSize: 8,
+                                                      color: Colors.white,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                top: 15,
+                                                right: 15,
+                                                left: 15,
+                                                bottom: 0,
+                                              ),
+                                              child: Container(
+                                                decoration: BoxDecoration(
+                                                    color: Colors.blue,
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            20)),
+                                                child: Padding(
+                                                  padding:
+                                                      const EdgeInsets.only(
+                                                    top: 10,
+                                                    right: 15,
+                                                    left: 15,
+                                                    bottom: 10,
+                                                  ),
+                                                  child: Text(
+                                                    "TAKE TEST",
+                                                    style: TextStyle(
+                                                      fontSize: 10,
+                                                      color: Colors.white,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                  right: 10.0,
+                                  left: 10.0,
+                                ),
+                                child: Container(
+                                  height: 380,
+                                  width: 240,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(15),
+                                    boxShadow: [
+                                      new BoxShadow(
+                                        color: Colors.black12,
+                                        // offset: new Offset(20.0, 10.0),
+                                        blurRadius: 20.0,
+                                      )
+                                    ],
+                                  ),
+                                  child: Column(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        children: <Widget>[
+                                          Padding(
+                                            padding: const EdgeInsets.only(
+                                              right: 20,
+                                              left: 20,
+                                              top: 0,
+                                              bottom: 0,
+                                            ),
+                                            child: Row(
+                                              children: <Widget>[
+                                                Text(
+                                                  "3",
+                                                  style: TextStyle(
+                                                    fontSize: 195,
+                                                    color: Colors.blue,
+                                                  ),
+                                                ),
+                                                Text(
+                                                  "\u1d3f\u1d30",
+                                                  style: TextStyle(
+                                                    fontSize: 90,
+                                                    color: Colors.blue,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          Text(
+                                            "MODULE",
+                                            style: TextStyle(
+                                                fontSize: 40,
+                                                fontWeight: FontWeight.bold,
+                                                color: Colors.blue),
+                                          ),
+                                        ],
+                                      ),
+                                      Container(
+                                        height: 100,
+                                        width: 150,
+                                        decoration: BoxDecoration(
+                                          color: Colors.white30,
+                                          borderRadius:
+                                              BorderRadius.circular(15),
+                                          // boxShadow: [
+                                          //   new BoxShadow(
+                                          //     color: Colors.black12,
+                                          //     // offset: new Offset(20.0, 10.0),
+                                          //     blurRadius: 20.0,
+                                          //   )
+                                          // ],
+                                        ),
+                                        child: Column(
+                                          children: <Widget>[
+                                            Text(
+                                              "CBSE Std. VIII",
+                                              style: TextStyle(
+                                                  fontSize: 10,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.blue),
+                                            ),
+                                            Padding(
+                                              padding: const EdgeInsets.all(5),
+                                              child: Container(
+                                                decoration: BoxDecoration(
+                                                    color: Colors.blue,
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            10)),
+                                                child: Padding(
+                                                  padding:
+                                                      const EdgeInsets.only(
+                                                    top: 4,
+                                                    right: 15,
+                                                    left: 15,
+                                                    bottom: 4,
+                                                  ),
+                                                  child: Text(
+                                                    "EDIT",
+                                                    style: TextStyle(
+                                                      fontSize: 8,
+                                                      color: Colors.white,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                top: 15,
+                                                right: 15,
+                                                left: 15,
+                                                bottom: 0,
+                                              ),
+                                              child: Container(
+                                                decoration: BoxDecoration(
+                                                    color: Colors.blue,
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            20)),
+                                                child: Padding(
+                                                  padding:
+                                                      const EdgeInsets.only(
+                                                    top: 10,
+                                                    right: 15,
+                                                    left: 15,
+                                                    bottom: 10,
+                                                  ),
+                                                  child: Text(
+                                                    "TAKE TEST",
+                                                    style: TextStyle(
+                                                      fontSize: 10,
+                                                      color: Colors.white,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                  left: 10.0,
+                                ),
+                                child: Container(
+                                  height: 380,
+                                  width: 240,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(15),
+                                    boxShadow: [
+                                      new BoxShadow(
+                                        color: Colors.black12,
+                                        // offset: new Offset(20.0, 10.0),
+                                        blurRadius: 20.0,
+                                      )
+                                    ],
+                                  ),
+                                  child: Column(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        children: <Widget>[
+                                          Padding(
+                                            padding: const EdgeInsets.only(
+                                              right: 20,
+                                              left: 20,
+                                              top: 0,
+                                              bottom: 0,
+                                            ),
+                                            child: Row(
+                                              children: <Widget>[
+                                                Text(
+                                                  "3",
+                                                  style: TextStyle(
+                                                    fontSize: 195,
+                                                    color: Colors.blue,
+                                                  ),
+                                                ),
+                                                Text(
+                                                  "\u1d3f\u1d30",
+                                                  style: TextStyle(
+                                                    fontSize: 90,
+                                                    color: Colors.blue,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          Text(
+                                            "MODULE",
+                                            style: TextStyle(
+                                                fontSize: 40,
+                                                fontWeight: FontWeight.bold,
+                                                color: Colors.blue),
+                                          ),
+                                        ],
+                                      ),
+                                      Container(
+                                        height: 100,
+                                        width: 150,
+                                        decoration: BoxDecoration(
+                                          color: Colors.white30,
+                                          borderRadius:
+                                              BorderRadius.circular(15),
+                                          // boxShadow: [
+                                          //   new BoxShadow(
+                                          //     color: Colors.black12,
+                                          //     // offset: new Offset(20.0, 10.0),
+                                          //     blurRadius: 20.0,
+                                          //   )
+                                          // ],
+                                        ),
+                                        child: Column(
+                                          children: <Widget>[
+                                            Text(
+                                              "CBSE Std. VIII",
+                                              style: TextStyle(
+                                                  fontSize: 10,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.blue),
+                                            ),
+                                            Padding(
+                                              padding: const EdgeInsets.all(5),
+                                              child: Container(
+                                                decoration: BoxDecoration(
+                                                    color: Colors.blue,
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            10)),
+                                                child: Padding(
+                                                  padding:
+                                                      const EdgeInsets.only(
+                                                    top: 4,
+                                                    right: 15,
+                                                    left: 15,
+                                                    bottom: 4,
+                                                  ),
+                                                  child: Text(
+                                                    "EDIT",
+                                                    style: TextStyle(
+                                                      fontSize: 8,
+                                                      color: Colors.white,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                top: 15,
+                                                right: 15,
+                                                left: 15,
+                                                bottom: 0,
+                                              ),
+                                              child: Container(
+                                                decoration: BoxDecoration(
+                                                    color: Colors.blue,
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            20)),
+                                                child: Padding(
+                                                  padding:
+                                                      const EdgeInsets.only(
+                                                    top: 10,
+                                                    right: 15,
+                                                    left: 15,
+                                                    bottom: 10,
+                                                  ),
+                                                  child: Text(
+                                                    "TAKE TEST",
+                                                    style: TextStyle(
+                                                      fontSize: 10,
+                                                      color: Colors.white,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
                             ],
